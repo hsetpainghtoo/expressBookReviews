@@ -1,0 +1,2 @@
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews$ curl -s https://api.github.com/repos/hsetpainghtoo/expressBookReviews | jq '.parent.full_name'
+"ibm-developer-skills-network/expressBookReviews"

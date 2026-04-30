@@ -1,0 +1,12 @@
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X POST http://localhost:5000/register -H "Content-Type: application/json" -d '{"username":"user1", "password":"pass1"}'
+{"message":"User registered successfully"}
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X POST http://localhost:5000/customer/login -H "Content-Type: application/json" -d '{"username":"user1", "password":"pass1"}' -c cookies.txt
+{"message":"Login successful"}
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X PUT "http://localhost:5000/customer/auth/review/10?review=Great%20book!" -H "Content-Type: application/json" -b cookies.txt
+{"message":"Review added/updated successfully"}
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X GET http://localhost:5000/review/10
+{"user10":"A groundbreaking work of existential literature that challenges traditional narrative forms.","user1":"Great book!"}
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X DELETE "http://localhost:5000/customer/auth/review/10" -H "Content-Type: application/json" -b cookies.txt
+{"message":"Review deleted successfully"}
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X GET http://localhost:5000/review/10
+{"user10":"A groundbreaking work of existential literature that challenges traditional narrative forms."}

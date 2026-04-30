@@ -1,0 +1,2 @@
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X GET http://localhost:5000/review/6
+{"user6":"A collection of Middle Eastern folk tales that has enchanted readers for centuries."}

@@ -1,0 +1,2 @@
+hset-paing@HPH:~/Desktop/code_folder/coursera/expressBookReviews/final_project$ curl -X POST http://localhost:5000/register -H "Content-Type: application/json" -d '{"username":"user1", "password":"pass1"}'
+{"message":"User registered successfully"}
