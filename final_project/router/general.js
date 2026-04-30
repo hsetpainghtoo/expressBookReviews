@@ -30,7 +30,7 @@ public_users.get("/", async function (req, res) {
     const bookList = await new Promise((resolve, reject) => {
       resolve(books);
     });
-    res.status(200).json(bookList);
+    res.send(JSON.stringify(bookList, null, 4));
   } catch (error) {
     res.status(500).json({ message: "Error fetching books" });
   }
